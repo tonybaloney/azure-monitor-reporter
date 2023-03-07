@@ -67,7 +67,7 @@ def query_kusto(req: func.HttpRequest) -> func.HttpResponse:
 
     blob = BlobClient.from_connection_string(conn_str=os.environ["AZURE_STORAGE_CONNECTION_STRING"], container_name=os.environ["AZURE_STORAGE_CONTAINER_NAME"], blob_name=f"{request_id}.png")
 
-    blob.upload_blob(s.getvalue)
+    blob.upload_blob(s.getvalue())
     s.close()
 
     return func.HttpResponse(json.dumps({"url": blob.url}), mimetype="application/json")
