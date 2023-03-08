@@ -23,7 +23,7 @@ app = func.FunctionApp()
 # Get started by running the following code to create a function using a HTTP trigger.
 
 @app.function_name(name="QueryKusto")
-@app.route(route="graph", methods=[func.HttpMethod.POST])
+@app.route(route="graph", methods=[func.HttpMethod.POST], auth_level=func.AuthLevel.ANONYMOUS)
 def query_kusto(req: func.HttpRequest) -> func.HttpResponse:
     request_id = str(uuid.uuid4())
     logging.info('Assigning request %s', request_id)

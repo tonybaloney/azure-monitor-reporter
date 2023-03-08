@@ -5,5 +5,9 @@
     "azureFunctions.projectLanguage": "Python",
     "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",
-    "azureFunctions.projectLanguageModel": 2
+    "azureFunctions.projectLanguageModel": 2,
+    "yaml.schemas": {
+        "file:///Users/anthonyshaw/.vscode/extensions/docsmsft.docs-yaml-0.2.9/out/yaml-support/toc.schema.json": "/toc\\.yml/i",
+        "https://json.schemastore.org/github-workflow.json": "file:///Users/anthonyshaw/projects/azure-monitor-reporter/.github/workflows/deploy.yaml"
+    }
 }
